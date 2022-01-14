@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "wxInput": "../../components/wxInput/wxInput",
+    "wxScroll": "../../components/wxScroll/wxScroll",
+    "wxSwiperScroll": "../../components/wxSwiperScroll/wxSwiperScroll"
+  }
+}

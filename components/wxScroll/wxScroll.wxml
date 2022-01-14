@@ -1,0 +1,11 @@
+<!--components/wxScroll/wxScroll.wxml-->
+<scroll-view
+  scroll-x="{{scrollX}}"
+  scroll-y="{{scrollY}}"
+  scroll-top="{{scrollTop}}"
+  scroll-left="{{scrollLeft}}"
+  scroll-with-animation="{{scrollWithAnimation}}"
+  enhanced="{{enhanced}}"
+>
+<slot></slot>
+</scroll-view>

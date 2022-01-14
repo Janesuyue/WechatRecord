@@ -1,0 +1,36 @@
+<!--components/wxInput/wxInput.wxml-->
+<!-- <view class="wx_input input-class"> -->
+  <view class="wx_input {{className}}" style="{{style}}">
+  <view>
+    <slot name="prefix"></slot>
+  </view>
+  <view class="input_main">
+    <input
+      style="{{inputStyle}}"
+      class="input {{inputClass}}"
+      value="{{inputValue}}"
+      type="{{type}}"
+      password="{{password}}"
+      placeholder="{{placeholder}}"
+      placeholder-style="{{placeholderStyle}}"
+      placeholder-class="{{placeholderClass}}"
+      disabled="{{disabled}}"
+      maxlength="{{maxlength}}"
+      focus="{{focus || inputFocus}}"
+      confirm-type="{{confirmType}}"
+      bind:input="_bindinput"
+      bind:focus="_bindfocus"
+      bind:blur="_bindblur"
+      bind:confirm="_bindconfirm"
+    />
+    <view
+      wx:if="{{allowClear && isAllowClear}}"
+      class="clear" 
+      style="{{clearIcon + clearStyle}}"
+      bind:touchstart="_bindClear"
+    ></view>
+  </view>
+  <view>
+    <slot name="suffix"></slot>
+  </view>
+</view>

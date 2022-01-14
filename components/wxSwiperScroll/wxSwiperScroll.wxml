@@ -1,0 +1,19 @@
+<!--components/wxSwiperScroll/wxSwiperScroll.wxml-->
+<view>
+  <scroll-view class="scroll-wrapper" scroll-x scroll-with-animation="true" scroll-into-view="item{{currentTab < 4 ? 0 : currentTab - 3}}">
+    <view class="navigate-item" id="item{{index}}" wx:for="{{taskList}}" wx:key="{{index}}" data-index="{{index}}" bindtap="handleClick">
+      <view class="names {{currentTab === index ? 'active' : ''}}">{{item.name}}</view>
+      <view class="currtline {{currentTab === index ? 'active' : ''}}"></view>
+    </view>
+  </scroll-view>
+
+  <swiper>
+    <swiper-item style="background-color: aqua;">
+      <wxScroll>
+        内容
+      </wxScroll>
+    </swiper-item>
+    <swiper-item style="background-color: red;"></swiper-item>
+    <swiper-item style="background-color: yellow;"></swiper-item>
+  </swiper>
+</view>

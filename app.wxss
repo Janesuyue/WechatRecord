@@ -1,0 +1,7 @@
+/**app.wxss**/
+page {
+  min-height: 100vh;
+}
+view {
+  line-height: 1;
+}

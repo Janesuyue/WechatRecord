@@ -1,0 +1,24 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- <wxInput input-class="wxInput">
+    <view slot="prefix">prefix</view>
+  </wxInput> -->
+  <wxInput 
+    className="search_main"
+    inputClass="search_input" 
+    placeholderClass="search_placeholder"
+    placeholder="请输入标题名称进行搜索"
+    confirmType="search"
+    value="{{searchValue}}"
+    focus="{{isInputFocus}}"
+    allowClear="{{true}}"
+    bindconfirm="handleSearchConfirm"
+    bindclearChange="clearChange"
+  >
+  </wxInput>
+  <!-- bindchange="handleChange" -->
+  <!-- <wxScroll>
+    内容
+  </wxScroll> -->
+  <!-- <wxSwiperScroll></wxSwiperScroll> -->
+</view>
