@@ -1,7 +1,8 @@
 ####  wxInput 使用方法
 
 > 属性方法
-|		参数		   					|		类型	               |		默认值		          |	  说明	                                                                          
+|		参数		   					|		类型	               |		默认值		          |	  说明	
+|		name								|	   String             |						            |   配合form 表单组件使用, 在表单组件中加上 name 来作为 key
 |		value								|	   String             |						            |   输入框的内容
 |		type								|	   String             |		text		            |   input 的类型
 |		password						|    Boolean            |		false		            |   是否是密码类型

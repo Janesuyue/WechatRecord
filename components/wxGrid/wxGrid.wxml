@@ -1,0 +1,32 @@
+<!--components/wxGrid/wxGrid.wxml-->
+<swiper style="height: {{swiperHeight}}px;">
+  <block wx:for="{{swiperList}}" wx:key="index">
+    <swiper-item>
+      <view class="grid_main" style="grid-template-columns: {{item.columns}}">
+        <block wx:for="{{item.list}}" wx:key="idx">
+          <view class="grid_item">
+            <view class="grid_item_icon">
+              <image class="icon_image" src="{{item.icon}}"></image>
+              <view wx:if="{{!item.badge}}" class="grid_item_dot"></view>
+              <view wx:else class="grid_item_badge">{{item.badge > 99 ? '99+' : item.badge}}</view>
+            </view>
+            <view class="grid_item_name">{{item.name}}</view>
+          </view>
+        </block>
+      </view>
+    </swiper-item>
+  </block>
+</swiper>
+<!-- <view class="grid_main">
+  <block wx:for="{{gridList}}" wx:key="index">
+    <view class="grid_item" style="width: calc(100% / {{columnNum}})">
+
+      <view class="grid_item_icon">
+        <image class="icon_image" src="{{item.icon}}"></image>
+        <view class="grid_item_dot"></view>
+        <view class="grid_item_badge"></view>
+      </view>
+      <view class="grid_item_name">{{item.name}}</view>
+    </view>
+  </block>
+</view> -->

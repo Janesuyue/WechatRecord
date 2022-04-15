@@ -1,13 +1,17 @@
 // components/wxInput/wxInput.js
 Component({
   // externalClasses: ["input-class"], // 外部样式类
+  externalClasses: ["class-name"],
   options: {
     multipleSlots: true, // 开启多功能插槽
   },
+  // behaviors: ['wx://form-field-group'], // 使 form 组件可以识别到这个自定义组件内部的所有表单控件
+  behaviors: ['wx://form-field'], // 使自定义组件有类似于表单控件的行为
   /**
    * 组件的属性列表
    */
   properties: {
+    name: String, // 配合form 表单组件使用
     value: { // 输入框的初始内容
       type: String,
       value: undefined
@@ -45,7 +49,7 @@ Component({
 
     // 以下为自定义属性
     style: String, // 通过style设置 wxInput 输入的样式
-    className: String, // 通过自定义className设置wxInput组件的样式
+    // className: String, // 通过自定义className设置wxInput组件的样式
     inputStyle: String, // 通过style设置input 输入的样式
     inputClass: String, // 指定 input 的样式类
     allowClear: { // 可以点击清除图标删除内容
@@ -145,11 +149,12 @@ Component({
       this.setData({
         inputValue: ''
       })
-      setTimeout(() => {
-        this.setData({
-          inputFocus: true
-        })
-      }, 200)
+      // 控制清空图表之后自动获取焦点
+      // setTimeout(() => {
+      //   this.setData({
+      //     inputFocus: true
+      //   })
+      // }, 200)
       // 输入框值变化监听事件
       this.triggerEvent('change', {
         value: '',

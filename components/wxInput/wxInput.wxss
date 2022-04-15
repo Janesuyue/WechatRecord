@@ -20,11 +20,14 @@
 /* .wx_input input {
   height: 100%;
 } */
+.prefix{}
+.suffix{}
 
 .wx_input .input_main {
   flex: 1;
   display: flex;
   align-items: center;
+  transition: .5s;
   /* width: 100%; */
 }
 
@@ -33,15 +36,16 @@
 }
 
 .wx_input .input_main .clear {
-  /* position: absolute; */
-  /* right: 0;
+  /* position: absolute;
+  right: 50rpx;
   top: 50%;
   transform: translateY(-50%);
   z-index: 999; */
   width: 36rpx;
   height: 36rpx;
+  margin-left: 20rpx;
   border-radius: 50%;
-  /* background-color: rgba(255, 255, 255, .4); */
+  /* background-color: rgba(105, 105, 105, 0.9); */
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;

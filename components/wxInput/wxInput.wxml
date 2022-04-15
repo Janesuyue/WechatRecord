@@ -1,11 +1,11 @@
 <!--components/wxInput/wxInput.wxml-->
 <!-- <view class="wx_input input-class"> -->
-  <view class="wx_input {{className}}" style="{{style}}">
-  <view>
-    <slot name="prefix"></slot>
-  </view>
+<!-- <view class="wx_input {{className}}" style="{{style}}"> -->
+  <view class="wx_input class-name" style="{{style}}">
+  <slot name="prefix"></slot>
   <view class="input_main">
     <input
+      name="{{name}}"
       style="{{inputStyle}}"
       class="input {{inputClass}}"
       value="{{inputValue}}"
@@ -28,9 +28,8 @@
       class="clear" 
       style="{{clearIcon + clearStyle}}"
       bind:touchstart="_bindClear"
-    ></view>
+    >
+    </view>
   </view>
-  <view>
-    <slot name="suffix"></slot>
-  </view>
+  <slot name="suffix"></slot>
 </view>

@@ -10,7 +10,7 @@ Component({
     },
     scrollY: { // 允许纵向滚动
       type: Boolean,
-      value: false
+      value: true
     },
     scrollTop: { // 设置竖向滚动条位置
       optionalTypes: [Number, String],
@@ -22,12 +22,21 @@ Component({
     },
     scrollWithAnimation: { // 在设置滚动条位置时使用动画过渡
       type: Boolean,
-      value: false
+      value: true
+    },
+    refresherEnabled: { // 开启自定义下拉刷新
+      type: Boolean,
+      value: true
+    },
+    refresherThreshold: { // 设置自定义下拉刷新阈值
+      type: Number,
+      value: 10
     },
     enhanced: { // 启用 scroll-view 增强特性，启用后可通过 ScrollViewContext 操作 scroll-view
       type: Boolean,
       value: false
-    }
+    },
+    height: Number
   },
 
   /**

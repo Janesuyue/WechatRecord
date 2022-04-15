@@ -16,9 +16,33 @@
     bindclearChange="clearChange"
   >
   </wxInput>
+  <form
+    catchsubmit="formSubmit"
+  >
+    <wxInput 
+      name="searchName"
+      className="search_main"
+      inputClass="search_input" 
+      placeholderClass="search_placeholder"
+      placeholder="请输入标题名称进行搜索"
+      confirmType="search"
+      value="{{searchValue}}"
+      focus="{{isInputFocus}}"
+      allowClear="{{true}}"
+      bindconfirm="handleSearchConfirm"
+      bindclearChange="clearChange"
+    >
+    </wxInput>
+    <button style="margin: 30rpx 0" type="primary" formType="submit">Submit</button>
+  </form>
+  <!-- <wxGrid gridList="{{gridList}}"></wxGrid> -->
   <!-- bindchange="handleChange" -->
   <!-- <wxScroll>
-    内容
+    <block wx:for="{{100}}" wx:key="index">
+      <view class="list_item">
+        内容
+      </view>
+    </block>
   </wxScroll> -->
   <!-- <wxSwiperScroll></wxSwiperScroll> -->
 </view>

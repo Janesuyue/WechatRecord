@@ -2,6 +2,7 @@
   "usingComponents": {
     "wxInput": "../../components/wxInput/wxInput",
     "wxScroll": "../../components/wxScroll/wxScroll",
-    "wxSwiperScroll": "../../components/wxSwiperScroll/wxSwiperScroll"
+    "wxSwiperScroll": "../../components/wxSwiperScroll/wxSwiperScroll",
+    "wxGrid": "../../components/wxGrid/wxGrid"
   }
 }

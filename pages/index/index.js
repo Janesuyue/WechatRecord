@@ -11,10 +11,40 @@ Page({
       wx.navigateTo({
         url: '../test/test',
       })
-    }
+    },
+    searchValue: '',
+    gridList: [
+      // { icon: '', name: '文字', badge: 99, },
+      // { icon: '', name: '文字', badge: 1 },
+      // { icon: '', name: '文字', badge: 100 },
+      // { icon: '', name: '文字' },
+      // { icon: '', name: '文字' },
+      // { icon: '', name: '文字' },
+      // { icon: '', name: '文字' },
+      { icon: '', name: '文字' },
+      { icon: '', name: '文字' },
+      { icon: '', name: '文字' },
+      { icon: '', name: '文字' },
+      { icon: '', name: '文字' },
+      { icon: '', name: '文字' },
+      // { icon: '', name: '文字' },
+      // { icon: '', name: '文字' },
+      // { icon: '', name: '文字' },
+    ],
   },
   onLoad() {
     // console.log(_)
+    wx.onAppHide(() => {
+      console.log('getStorage', wx.getStorageSync('key'))
+      if (wx.getStorageSync('key')) {
+        wx.setStorageSync('key', "1" + wx.getStorageSync('key'))
+      } else {
+        wx.setStorageSync('key', "1")
+      }
+    })
+  },
+  formSubmit(e) {
+    console.log('form发生了submit事件，携带数据为：', e.detail.value)
   },
   handleChange(e) {
     console.log('父组件-bindinput', e.detail.value)

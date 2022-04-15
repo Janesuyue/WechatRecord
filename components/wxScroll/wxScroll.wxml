@@ -1,11 +1,15 @@
 <!--components/wxScroll/wxScroll.wxml-->
 <scroll-view
+  class="wxScroll"
+  style="height:{{height || ''}}px"
   scroll-x="{{scrollX}}"
   scroll-y="{{scrollY}}"
   scroll-top="{{scrollTop}}"
   scroll-left="{{scrollLeft}}"
   scroll-with-animation="{{scrollWithAnimation}}"
+  refresher-enabled="{{refresherEnabled}}"
+  refresher-threshold="{{refresherThreshold}}"
   enhanced="{{enhanced}}"
 >
-<slot></slot>
+  <slot></slot>
 </scroll-view>
