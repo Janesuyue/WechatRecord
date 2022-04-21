@@ -24,6 +24,7 @@
 | clearStyle | String |  | 可通过clearStyle自定义清空图标样式(通过背景图可替换清空图标) |
 
 > 事件
+
 | 参数 | 类型 | 默认值 | 说明 |
 |--|--|--|--|
 | change | function(e) |  | 键盘输入时触发 |
@@ -33,6 +34,7 @@
 | clearChange | function(e) |  | 点击清空图标监听事件 |
 
 > slot 插槽
+
 | 参数 | 类型 | 默认值 | 说明 |
 |--|--|--|--|
 | prefix | node |  | 可自定义input前缀 |
